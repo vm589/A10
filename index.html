@@ -1,0 +1,61 @@
+<html>
+     <head>
+       <title> Victor's Q1 Website </title>
+     </head>
+     <body>
+<h1> My name is Victor Moreira </h1>
+<h2> This webpage is meant for me to introduce myself </h2>
+<p> I am 18 years old and a freshman at NJIT. 
+I am studying Information Technology with the 
+hopes of being able to teach others and have a 
+successful career in cyber security. </p>
+
+
+<p> A useful website I like is something that helps me in learning html and css to become a webdeveloper. Its called code academy and can be found below.
+            
+            
+<h3> My interests </h3>
+<p> I have a lot of hobbees I like to do outside of school as well.
+These can include:</p>
+<ul> 
+<li> Playing soccer </li>
+<li> Playing my instrument </li>
+<li> Watching boxing </li>
+</ul>
+<img src="https://images.shiksha.com/mediadata/images/1537113627phpCc37yG.jpeg" alt="NJIT University" width="500" height="600">
+<h3> Have a good day! </h3>
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 365);
+    }
+  }
+}
+       </body>
+</html>
